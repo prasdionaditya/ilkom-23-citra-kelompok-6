@@ -5,15 +5,16 @@ Dokumen ini berisi daftar anggota tim dan peran mereka dalam proyek ini.
 ## 👥 Daftar Anggota Tim
 
 ### **Manajemen & Koordinasi**
-- **[MUH.AKSAL_PRASDIONADITYA]** - Project Manager
+- **[F1G123023] MUHAMMAD AKSAL PRASDIONADITYA** - Project Manager
 
 ### **Tim Desain (UI/UX)**
-- **[PUTRI_ADELIA]** - UI/UX Designer
+- **[F1G1230??] PUTRI ADELIA** - UI/UX Designer
 
 ### **Tim Pengembang (Development)**
-- **[PISKA_PRATIWI_DAN_KHALIFAH_ADAM_AHCMAD]** - Frontend Developer (HTML DAN CSS)
-- **[MUH_RAFLI_ARIFIN]** - Backend Developer (PYTHON)
-- **[Nama]** - Full Stack Developer
+- **[F1G1230??] PISKA PRATIWI** - Frontend Developer (CSS)
+- **[F1G1230??] KHALIFAH ADAM AHCMAD** - Frontend Developer (CSS)
+- **[F1G1230??] MUH RAFLI ARIFIN** - Backend Developer (PYTHON)
+- **MUHAMMAD AKSAL PRASDION ADITYA** - JavaScript
 
-### **Tim Dokumentasi & Pengujian**
-- **[DELLA_MUSTIFAR]** - Technical Writer
+### **Dokumentasi & Pengujian**
+- **[F1G1230??] DELLA MUSTIFAR** - Technical Writer
