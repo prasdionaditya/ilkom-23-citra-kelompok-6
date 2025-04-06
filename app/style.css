@@ -13,7 +13,7 @@
   }
   
   /* Background image penuh */
-  .background {
+  .backgroundindex {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,16 @@
     z-index: -1;
     filter: brightness(0.4);
   }
-  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    z-index: -1;
+    filter: brightness(0.4);
+  }
   /* Header */
   header {
     background-color: rgba(0, 0, 0, 0.6);
