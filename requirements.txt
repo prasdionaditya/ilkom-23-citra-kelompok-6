@@ -1,0 +1,8 @@
+flask==3.1.0
+numpy==2.2.3
+opencv-python==4.11.0.86
+Pillow==11.1.0
+scikit-learn==1.6.1
+matplotlib==3.10.1
+
+#quick note, ini versi semua library di atas mungkin hanya work di versi python 3.13++, saya belum mencoba untuk versi yang di bawahnya....
