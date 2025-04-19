@@ -19,3 +19,32 @@
             <button>Tentang Kami</button>
         </nav>
     </header>
+
+    <main>
+        <h1>Konversi Warna Gambar ke HSV</h1>
+        <p>Konverter gambar ke HSV yang praktis dan efisien dari DetecTone. Cukup unggah gambar, lalu ekstrak saluran hue, saturation, atau value dengan mudah melalui opsi yang tersedia. Prosesnya cepat, akurat, dan mendukung berbagai kebutuhan analisis warna. Ubah gambar ke HSV dalam hitungan detik dengan teknologi canggih dari DetecTone.</p>
+
+        <section>
+            <div class="tool-container">
+                <h3>Input Gambar</h3>
+                <div id="drop-area">
+                    <p>atau letakkan gambar di sini</p>
+                    <img id="preview-image">
+                </div>
+                <button id="upload-btn" class="upload-btn">Unggah Gambar</button>
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+            </div>
+
+            <div class="tool-container">
+                <h3>Hasil Konversi ke HSV</h3>
+                <div id="result-container">
+                    <img id="result-image">
+                </div>
+            </div>
+        </section>
+        
+        <div class="button-container">
+            <button id="process-btn" class="process-btn">Proses ke HSV</button>
+            <button id="save-btn" class="save-btn">Simpan Gambar</button>
+        </div>
+    </main>
