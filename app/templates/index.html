@@ -18,3 +18,18 @@
             <button>Tentang Kami</button>
         </nav>
     </header>
+
+    <div class="container">
+        <div class="split-image-container">
+            <div class="split-image">
+                <div class="img-wrapper">
+                    <img src="{{ url_for('static', filename='foto/hitam.jpg') }}" class="img img-after">
+                </div>
+                <div class="img-wrapper img-before-wrapper">
+                    <img src="{{ url_for('static', filename='foto/hitam.jpg') }}" class="img img-before" style="filter: grayscale(100%);">
+                </div>
+                <div class="slider-handle" id="sliderHandle"></div>
+                <div class="label-before">sebelum</div>
+                <div class="label-after">setelah</div>
+            </div>
+        </div>
