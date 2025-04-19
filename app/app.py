@@ -41,7 +41,31 @@ def image_to_base64(image):
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
     return f"data:image/png;base64,{img_str}"
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+@app.route('/hsv')
+def hsv():
+    return render_template('hsv.html')
+
+@app.route('/grayscale')
+def grayscale():
+    return render_template('grayscale.html')
+
+@app.route('/process', methods=['POST'])
+def process():
+    image_data = request.json['image']
+    operation = request.json['operation']
+    
+    original, processed = process_image(image_data, operation)
+    processed_base64 = image_to_base64(processed)
+    
+    response = {
+        'processed_image': processed_base64,
+    }
+    
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
