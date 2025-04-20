@@ -71,7 +71,7 @@ Proses membagi gambar menjadi beberapa bagian atau segmen berdasarkan karakteris
 ### 15. Filter
 Proses penerapan operasi matematika pada gambar untuk memperbaiki atau memodifikasi karakteristik gambar, seperti mengurangi noise atau menonjolkan fitur tertentu.
 
-### 17. **Piksel**
+### 17. **Piksel
 Elemen terkecil dalam sebuah gambar digital yang mewakili nilai warna atau intensitas cahaya.
 
 ### 18. **Color Space**
