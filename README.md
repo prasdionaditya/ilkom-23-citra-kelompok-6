@@ -21,7 +21,7 @@ warna-dominan/
 ```
 
 ## Instalasi
-Pastikan Anda memiliki **Python 3.x** terinstal di sistem Anda. Kemudian, jalankan perintah berikut untuk menginstal dependensi yang dibutuhkan:
+Pastikan Anda memiliki **Python** terinstal di sistem Anda. Kemudian, jalankan perintah berikut untuk menginstal dependensi yang dibutuhkan:
 
 ```sh
 pip install -r requirements.txt
