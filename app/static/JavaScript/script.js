@@ -14,3 +14,5 @@ function setupSlider() {
         sliderHandle.style.left = percent + "%";
     });
 }
+
+// Fungsi untuk halaman hsv.html dan grayscale.html
