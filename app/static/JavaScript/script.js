@@ -31,3 +31,5 @@ function setupImageProcessing() {
     let currentPage = '';
 
     // Determine current page
+    if (window.location.pathname.includes('hsv')) {
+    
