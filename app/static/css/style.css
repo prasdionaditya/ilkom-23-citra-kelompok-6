@@ -7,14 +7,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #fffffffa;
+    color: #fffffffc;
     position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-  /* Background image penuh */
+  /* Background image full */
 .backgroundindex {
     position: fixed;
     top: 0;
@@ -32,14 +32,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #d4d4d4;
+    background-color: #d4d4d4e4;
     z-index: -1;
     filter: brightness(0.4);
 }
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@ header {
 
 header .logo h1 {
     font-size: 24px;
-    color: #fff;
+    color: #fffffffe;
 }
 
 header .logo img {
@@ -68,7 +68,7 @@ header nav button {
 }
 
 header nav button:hover {
-    background-color: #e68900;
+    background-color: #e68a00f1;
 }
 
 /* Kontainer utama */
@@ -120,7 +120,7 @@ header nav button:hover {
     left: 50%;
     width: 5px;
     height: 100%;
-    background-color: #f5f4f4;
+    background-color: #f5f4f4e8;
     z-index: 3;
     cursor: ew-resize;
 }
@@ -130,7 +130,7 @@ header nav button:hover {
     position: absolute;
     top: 10px;
     background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: #fffffffe;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 14px;
@@ -164,7 +164,7 @@ header nav button:hover {
   /* Tools */
 .tools {
     text-align: center;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.386);
     padding: 20px;
     border-radius: 10px;
     margin-top: 30px;
@@ -173,7 +173,7 @@ header nav button:hover {
 .tools h2 {
     font-size: 22px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fffffffd;
 }
 
 .tool-item {
@@ -181,7 +181,7 @@ header nav button:hover {
     width: 30%;
     margin: 10px;
     text-align: center;
-    color: #fff;
+    color: #ffffffff;
 }
 
 .tool-item img {
@@ -194,7 +194,7 @@ header nav button:hover {
 .tool-item div {
     font-weight: bold;
     font-size: 14px;
-    color: #fff;
+    color: #fffffff3;
 }
 
 
@@ -203,7 +203,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: #fffffffd;
     margin-top: auto;
 }
 
@@ -212,7 +212,7 @@ main {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
-    color: #fff;
+    color: #fffffff9;
     flex: 1;
 }
 
@@ -252,7 +252,7 @@ main section h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.915);
     background-image: linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9),
         linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9);
     background-size: 20px 20px;
@@ -284,7 +284,7 @@ main section h3 {
     padding: 20px;
     height: 300px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
     text-align: center;
     color: #333;
 }
@@ -299,7 +299,7 @@ main section h3 {
   /* Button styles */
 .upload-btn {
     padding: 10px 20px;
-    background-color: #2196F3;
+    background-color: #2192ee;
     color: white;
     border: none;
     border-radius: 4px;
@@ -310,7 +310,7 @@ main section h3 {
 }
 
 .upload-btn:hover {
-    background-color: #0b7dda;
+    background-color: #0c7bd6;
 }
 
   /* Button container for tool pages */
@@ -324,7 +324,7 @@ main section h3 {
 
 .process-btn {
     padding: 12px 30px;
-    background-color: #ff9800;
+    background-color: #fc9700;
     color: white;
     border: none;
     border-radius: 4px;
@@ -334,12 +334,12 @@ main section h3 {
 }
 
 .process-btn:hover {
-    background-color: #e68900;
+    background-color: #e48a02;
 }
 
 .save-btn {
     padding: 12px 30px;
-    background-color: #4CAF50;
+    background-color: #4bb34f;
     color: white;
     border: none;
     border-radius: 4px;
