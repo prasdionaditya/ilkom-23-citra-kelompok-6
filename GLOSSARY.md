@@ -74,7 +74,7 @@ Proses penerapan operasi matematika pada gambar untuk memperbaiki atau memodifik
 ### 16. Piksel
 Elemen terkecil dalam sebuah gambar digital yang mewakili nilai warna atau intensitas cahaya.
 
-### 18. **Color Space**
+### 18. Color Space
 Sistem koordinat yang digunakan untuk mewakili warna dalam berbagai model warna, seperti RGB, HSV, CMYK, dll.
 
 ### 19. **Noise**
