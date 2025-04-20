@@ -14,6 +14,9 @@ Berikut ini adalah fitur-fitur yang tersedia dalam proyek deteksi warna:
  - 🎨 **Konversi Warna Gambar ke HSV**
   -  Gambar ke HSV
  
+  - 🎨 **Deteksi Warna Dominan**
+  - Deteksi Warna Dominan
+ 
 - 📄 **Export Data**
   - Menyimpan hasil deteksi warna ke dalam file `.csv`.
 
