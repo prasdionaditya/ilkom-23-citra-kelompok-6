@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Deteksi Warna Dominan - DetecTone</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="background"></div>
@@ -26,35 +27,36 @@
         <p>Deteksi warna dominan yang praktis dan efisien dari DetecTone. Cukup unggah gambar, lalu sistem akan secara otomatis menganalisis dan menampilkan warna utama yang paling dominan. Prosesnya sangat cepat, akurat, dan mendukung berbagai kebutuhan desain serta analisis warna. Identifikasi warna utama dalam hitungan detik dengan teknologi canggih dari DetecTone.
         </p>
 
-        <section>
+        <section class="tools-section">
             <div class="tool-container">
                 <h3>Input Gambar</h3>
                 <div id="drop-area">
                     <p>atau letakkan gambar di sini</p>
                     <img id="preview-image">
                 </div>
-                <button id="upload-btn" class="upload-btn">Unggah Gambar</button>
-                <input type="file" id="file-input" accept="image/*" style="display: none;">
+                <div class="button-wrapper">
+                    <button id="upload-btn" class="upload-btn">Unggah Gambar</button>
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                </div>
             </div>
 
             <div class="tool-container">
                 <h3>Warna Dominan Terdeteksi</h3>
                 <div id="result-container" class="color-results">
-                    <!-- Hasil warna + HEX akan ditampilkan di sini -->
                 </div>
             </div>
         </section>
 
         <div class="button-container">
-            <button id="process-btn" class="process-btn">Deteksi Warna</button>
-            <button id="save-btn" class="save-btn">Simpan Gambar</button>
+            <button id="process-btn" class="process-btn" style="display: none;">Deteksi Warna</button>
+            <button id="save-btn" class="save-btn" style="display: none;">Simpan Hasil</button>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 DetecTone. Hak Cipta Dilindungi.</p>
     </footer>
-    
+
     <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function () {
+    setupSlider();
+    setupImageProcessing();
+    setupDominantColorDetection(); // Gunakan nama fungsi yang berbeda untuk menghindari konflik
+});
+
 // Fungsi untuk halaman index.html - Slider gambar
 function setupSlider() {
     const sliderHandle = document.getElementById("sliderHandle");
@@ -9,7 +15,7 @@ function setupSlider() {
     container.addEventListener("mousemove", (e) => {
         const rect = container.getBoundingClientRect();
         let offset = e.clientX - rect.left;
-        let percent = offset / container.offsetWidth * 100;
+        let percent = (offset / container.offsetWidth) * 100;
         beforeWrapper.style.width = percent + "%";
         sliderHandle.style.left = percent + "%";
     });
@@ -30,35 +36,34 @@ function setupImageProcessing() {
     let imageData = null;
     let currentPage = '';
 
-    // Determine current page
+    // Cek halaman saat ini
     if (window.location.pathname.includes('hsv')) {
         currentPage = 'hsv';
-    } else if (window.location.pathname.includes('grayscale')) { 
+    } else if (window.location.pathname.includes('grayscale')) {
         currentPage = 'grayscale';
     }
 
-    // Handle click on upload button
+    // Upload via klik tombol
     if (uploadBtn) {
-        uploadBtn.addEventListener('click', () => {
-            fileInput.click();
-        });
+        uploadBtn.addEventListener('click', () => fileInput.click());
     }
 
-    // Handle file selection
+    // Upload via input file
     if (fileInput) {
         fileInput.addEventListener('change', handleFile);
     }
 
+    // Drag & drop
     if (dropArea) {
         dropArea.addEventListener('dragover', (e) => {
             e.preventDefault();
             dropArea.style.borderColor = '#ff9800';
         });
-        
+
         dropArea.addEventListener('dragleave', () => {
             dropArea.style.borderColor = '#aaa';
         });
-        
+
         dropArea.addEventListener('drop', (e) => {
             e.preventDefault();
             dropArea.style.borderColor = '#aaa';
@@ -69,29 +74,30 @@ function setupImageProcessing() {
         });
     }
 
-    // Process file
+    // Tampilkan gambar setelah di-upload
     function handleFile() {
         const file = fileInput.files[0];
         if (file && file.type.match('image.*')) {
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 imageData = e.target.result;
                 previewImage.src = imageData;
                 previewImage.style.display = 'block';
                 processBtn.style.display = 'block';
-            }
+            };
             reader.readAsDataURL(file);
         }
     }
 
-    // Process image
+    // Proses gambar (hsv atau grayscale)
     if (processBtn) {
         processBtn.addEventListener('click', async () => {
             if (!imageData) return;
-            
+
             try {
-                const operation = currentPage === 'hsv' ? 'rgb_to_hsv' : 'rgb_to_grayscale';
-                
+                const operation =
+                    currentPage === 'hsv' ? 'rgb_to_hsv' : 'rgb_to_grayscale';
+
                 const response = await fetch('/process', {
                     method: 'POST',
                     headers: {
@@ -99,10 +105,10 @@ function setupImageProcessing() {
                     },
                     body: JSON.stringify({
                         image: imageData,
-                        operation: operation
+                        operation: operation,
                     }),
                 });
-                
+
                 const result = await response.json();
                 resultImage.src = result.processed_image;
                 resultImage.style.display = 'block';
@@ -114,12 +120,15 @@ function setupImageProcessing() {
         });
     }
 
-    // Save the processed image
+    // Simpan gambar hasil
     if (saveBtn) {
         saveBtn.addEventListener('click', () => {
             if (resultImage.src) {
                 const link = document.createElement('a');
-                link.download = currentPage === 'hsv' ? 'hsv-image.png' : 'grayscale-image.png';
+                link.download =
+                    currentPage === 'hsv'
+                        ? 'hsv-image.png'
+                        : 'grayscale-image.png';
                 link.href = resultImage.src;
                 link.click();
             } else {
@@ -128,9 +137,3 @@ function setupImageProcessing() {
         });
     }
 }
-
-// Initialize appropriate functions based on page content
-document.addEventListener('DOMContentLoaded', function() {
-    setupSlider();
-    setupImageProcessing();
-});
