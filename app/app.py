@@ -1,120 +1,213 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 import cv2
 import numpy as np
 import os
 from PIL import Image
-import io
 import base64
-from sklearn.cluster import KMeans  # Tambahkan import ini
+import io
+from sklearn.cluster import KMeans
+from collections import Counter
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# Konversi RGB ke HSV
 def rgb_to_hsv(img):
     hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
     return hsv_img
 
-# Konversi RGB ke Grayscale
 def rgb_to_grayscale(img):
     gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     return gray_img
 
-# Deteksi warna (merah, hijau, biru)
-def detect_color(img, color_name):
-    hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
-    if color_name == 'red':
-        # Untuk mendeteksi merah, butuh dua rentang karena berada di ujung spektrum HSV
-        lower_red1 = np.array([0, 120, 70])
-        upper_red1 = np.array([10, 255, 255])
-        lower_red2 = np.array([170, 120, 70])
-        upper_red2 = np.array([180, 255, 255])
-        mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
-        mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
-        mask = mask1 | mask2
-    elif color_name == 'green':
-        lower = np.array([35, 100, 100])
-        upper = np.array([85, 255, 255])
-        mask = cv2.inRange(hsv, lower, upper)
-    elif color_name == 'blue':
-        lower = np.array([100, 150, 0])
-        upper = np.array([140, 255, 255])
-        mask = cv2.inRange(hsv, lower, upper)
-    else:
-        return img
-
-    result = cv2.bitwise_and(img, img, mask=mask)
-    return result
-
-# TAMBAHKAN FUNGSI BARU INI - Deteksi warna dominan
-def detect_dominant_colors(img, n_colors=5):
-    # Reshape image untuk analisis clustering
-    pixels = img.reshape(-1, 3)
+def detect_dominant_colors_improved(img, num_colors=5):
+    """
+    Deteksi warna dominan menggunakan metode quantisasi warna yang lebih akurat
+    """
+    # Resize image untuk mempercepat proses
+    h, w = img.shape[:2]
+    if max(h, w) > 600:  # Resize hanya jika lebih besar dari 600px
+        scale = 600 / max(h, w)
+        img = cv2.resize(img, (int(w * scale), int(h * scale)))
     
-    # Gunakan KMeans untuk menemukan warna dominan
-    kmeans = KMeans(n_clusters=n_colors, random_state=42)
+    # Konversi ke format yang diterima oleh PIL
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Pastikan gambar dalam RGB
+    pil_img = Image.fromarray(img_rgb)
+    
+    try:
+        # Quantisasi warna menggunakan metode PIL
+        pil_img = pil_img.quantize(colors=num_colors, method=2)  # method=2 adalah median cut
+        
+        # Dapatkan palette warna
+        palette = pil_img.getpalette()
+        color_counts = Counter(pil_img.getdata())
+        total_pixels = pil_img.width * pil_img.height
+        
+        # Format hasil
+        color_info = []
+        for color_idx, count in color_counts.most_common(num_colors):
+            r = palette[color_idx*3]
+            g = palette[color_idx*3+1]
+            b = palette[color_idx*3+2]
+            
+            percentage = count / total_pixels * 100
+            hex_color = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+            
+            color_info.append({
+                'rgb': [r, g, b],
+                'hex': hex_color,
+                'percentage': round(percentage, 2)
+            })
+    except Exception as e:
+        print(f"Error in PIL quantize: {e}")
+        return detect_dominant_colors_kmeans(img, num_colors)
+    
+    return color_info
+
+def detect_dominant_colors_kmeans(img, num_colors=5):
+    """
+    Deteksi warna dominan menggunakan K-means dengan perbaikan
+    """
+    # Resize image untuk mempercepat proses
+    h, w = img.shape[:2]
+    if w > 600:  # Resize hanya jika lebih besar dari 600px
+        ratio = 600 / w
+        img = cv2.resize(img, (600, int(h * ratio)))
+    
+    # Pastikan gambar dalam format RGB
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    # Konversi ke ruang warna LAB yang lebih perceptual
+    lab_image = cv2.cvtColor(img, cv2.COLOR_RGB2LAB)
+    
+    # Reshape image untuk analisis
+    pixels = lab_image.reshape(-1, 3)
+    
+    # Gunakan K-means dengan inisialisasi yang lebih baik
+    kmeans = KMeans(n_clusters=num_colors, n_init=10, init='k-means++')
     kmeans.fit(pixels)
     
-    # Ambil warna dari centroid
-    colors = kmeans.cluster_centers_
+    # Dapatkan pusat cluster
+    centers = kmeans.cluster_centers_
     
-    # Hitung persentase setiap warna
+    # Konversi pusat cluster kembali ke RGB
+    centers_rgb = []
+    for center in centers:
+        # Pastikan kita membulatkan nilai center
+        lab_color = np.uint8(np.round([[center]]))  # Pembulatan center sebelum konversi
+        rgb_color = cv2.cvtColor(lab_color, cv2.COLOR_LAB2RGB)[0][0]
+        centers_rgb.append(rgb_color)
+    
+    # Hitung persentase tiap warna
     labels = kmeans.labels_
-    count_labels = np.bincount(labels)
-    percentage = count_labels / len(labels) * 100
+    count = Counter(labels)
     
-    # Buat hasil dengan hex code dan persentase
-    result = []
-    for i, color in enumerate(colors):
-        # Konversi ke RGB 0-255
-        rgb = np.round(color).astype(int)
-        # Konversi ke hex
-        hex_code = '#{:02x}{:02x}{:02x}'.format(rgb[0], rgb[1], rgb[2])
+    total_pixels = len(labels)
+    color_info = []
+    
+    for i, rgb in enumerate(centers_rgb):
+        # Konversi ke int
+        color = [int(c) for c in rgb]
+        count_percent = count[i] / total_pixels * 100
         
-        result.append({
-            'rgb': rgb.tolist(),
-            'hex': hex_code,
-            'percentage': percentage[i]
+        # Format ke RGB dan hex
+        hex_color = '#{:02x}{:02x}{:02x}'.format(color[0], color[1], color[2])
+        
+        color_info.append({
+            'rgb': color,
+            'hex': hex_color,
+            'percentage': round(count_percent, 2)
         })
     
-    # Urutkan berdasarkan persentase (dari yang terbesar)
-    result = sorted(result, key=lambda x: x['percentage'], reverse=True)
+    # Urutkan berdasarkan persentase
+    color_info = sorted(color_info, key=lambda x: x['percentage'], reverse=True)
     
-    return result
+    return color_info
 
-# Proses gambar
-def process_image(image_data, operation, color_name=None):
-    try:
-        image_data = image_data.split(',')[1]
-        image = Image.open(io.BytesIO(base64.b64decode(image_data))).convert("RGB")
-        img_array = np.array(image)
+def is_grayscale_image(img):
+    """
+    Deteksi apakah gambar adalah grayscale/hitam-putih
+    """
+    # Hitung perbedaan antar channel warna
+    diff_r_g = np.abs(img[:,:,0] - img[:,:,1])
+    diff_r_b = np.abs(img[:,:,0] - img[:,:,2])
+    diff_g_b = np.abs(img[:,:,1] - img[:,:,2])
+    
+    # Jika perbedaan minimal, gambar kemungkinan grayscale
+    threshold = 15  # Toleransi untuk kompresi artifak
+    is_gray = (
+        np.mean(diff_r_g) < threshold and 
+        np.mean(diff_r_b) < threshold and 
+        np.mean(diff_g_b) < threshold
+    )
+    
+    return is_gray
 
-        if operation == 'rgb_to_hsv':
-            processed = rgb_to_hsv(img_array)
-            result_img = Image.fromarray(cv2.cvtColor(processed, cv2.COLOR_RGB2HSV))
-        elif operation == 'rgb_to_grayscale':
-            processed = rgb_to_grayscale(img_array)
-            result_img = Image.fromarray(processed).convert('RGB')
-        elif operation == 'detect_color' and color_name:
-            processed = detect_color(img_array, color_name)
-            result_img = Image.fromarray(processed)
-        else:
-            result_img = image
+def detect_dominant_colors(img, num_colors=5):
+    """
+    Fungsi utama untuk deteksi warna dominan dengan
+    penanganan khusus untuk gambar hitam-putih
+    """
+    # Cek apakah gambar grayscale/hitam-putih
+    if is_grayscale_image(img):
+        # Konversi ke grayscale
+        gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+        
+        # Gunakan histogram untuk mendapatkan distribusi warna grayscale
+        hist = cv2.calcHist([gray], [0], None, [num_colors], [0, 256])
+        
+        # Dapatkan rentang nilai per bin
+        bin_width = 256 // num_colors
+        
+        color_info = []
+        total_pixels = gray.size
+        
+        for i in range(num_colors):
+            bin_count = hist[i][0]
+            if bin_count > 0:
+                # Nilai tengah bin sebagai warna representatif
+                gray_val = int(i * bin_width + bin_width/2)
+                percentage = (bin_count / total_pixels) * 100
+                
+                color_info.append({
+                    'rgb': [gray_val, gray_val, gray_val],
+                    'hex': '#{:02x}{:02x}{:02x}'.format(gray_val, gray_val, gray_val),
+                    'percentage': round(percentage, 2)
+                })
+        
+        # Urutkan berdasarkan persentase
+        return sorted(color_info, key=lambda x: x['percentage'], reverse=True)
+    
+    # Untuk gambar berwarna, gunakan metode quantisasi yang lebih baik
+    return detect_dominant_colors_improved(img, num_colors)
 
-        return img_array, result_img
-    except Exception as e:
-        print(f"Error in processing image: {e}")
-        return None, None
+def process_image(image_data, operation):
+    image_data = image_data.split(',')[1]
+    image = Image.open(io.BytesIO(base64.b64decode(image_data)))
+    img_array = np.array(image)
+    
+    if operation == 'rgb_to_hsv':
+        processed = rgb_to_hsv(img_array)
+        result_img = Image.fromarray(processed.astype('uint8'))
+    elif operation == 'rgb_to_grayscale':
+        processed = rgb_to_grayscale(img_array)
+        result_img = Image.fromarray(processed).convert('RGB')
+    elif operation == 'detect_colors':
+        # Untuk deteksi warna, tidak perlu mengubah gambar
+        dominant_colors = detect_dominant_colors(img_array)
+        return img_array, image, dominant_colors
+    else:
+        result_img = image
+    
+    return img_array, result_img
 
-# Ubah ke base64
 def image_to_base64(image):
+    """Convert PIL Image to base64 string"""
     buffered = io.BytesIO()
     image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
     return f"data:image/png;base64,{img_str}"
 
-# Route tampilan
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -128,53 +221,37 @@ def grayscale():
     return render_template('grayscale.html')
 
 @app.route('/deteksi_warna')
-def deteksi_warna_page():
+def deteksi_warna():
     return render_template('deteksi_warna.html')
 
-# Route proses gambar
 @app.route('/process', methods=['POST'])
 def process():
-    try:
-        data = request.get_json()
-        image_data = data['image']
-        operation = data['operation']
-        color_name = data.get('color_name', None)
+    image_data = request.json['image']
+    operation = request.json['operation']
+    
+    original, processed = process_image(image_data, operation)
+    processed_base64 = image_to_base64(processed)
+    
+    response = {
+        'processed_image': processed_base64,
+    }
+    
+    return jsonify(response)
 
-        print(f"Operasi: {operation}, Warna: {color_name}")
+@app.route('/detect_colors', methods=['POST'])
+def detect_colors():
+    image_data = request.json['image']
+    num_colors = request.json.get('num_colors', 5)  # Default 5 warna
+    
+    _, original_img, dominant_colors = process_image(image_data, 'detect_colors')
+    processed_base64 = image_to_base64(original_img)
+    
+    response = {
+        'processed_image': processed_base64,
+        'dominant_colors': dominant_colors
+    }
+    
+    return jsonify(response)
 
-        original, processed = process_image(image_data, operation, color_name)
-
-        if processed is None:
-            return jsonify({'error': 'Gagal memproses gambar'}), 500
-
-        processed_base64 = image_to_base64(processed)
-        return jsonify({'processed_image': processed_base64})
-    except Exception as e:
-        print(f"Error in /process route: {e}")
-        return jsonify({'error': 'Server error'}), 500
-
-# TAMBAHKAN ROUTE BARU INI - Route untuk proses deteksi warna dominan
-@app.route('/process_dominant_colors', methods=['POST'])
-def process_dominant_colors():
-    try:
-        data = request.get_json()
-        image_data = data['image']
-        
-        # Proses gambar untuk mendapatkan array numpy
-        image_data = image_data.split(',')[1]
-        image = Image.open(io.BytesIO(base64.b64decode(image_data))).convert("RGB")
-        img_array = np.array(image)
-        
-        # Deteksi warna dominan
-        dominant_colors = detect_dominant_colors(img_array)
-        
-        return jsonify({
-            'dominant_colors': dominant_colors
-        })
-    except Exception as e:
-        print(f"Error in /process_dominant_colors route: {e}")
-        return jsonify({'error': 'Gagal memproses gambar'}), 500
-
-# Jalankan app
 if __name__ == '__main__':
     app.run(debug=True)
