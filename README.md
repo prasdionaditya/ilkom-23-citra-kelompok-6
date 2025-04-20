@@ -48,3 +48,79 @@ pip install opencv-python numpy matplotlib scikit-learn
 
 ## Lisensi
 Proyek ini bersifat open-source dan dapat digunakan sesuai dengan lisensi yang berlaku.
+
+# Acknowledgements - Deteksi Warna/DetecTone
+
+Kami ingin mengucapkan terima kasih kepada semua pihak yang telah mendukung dan membantu dalam pengembangan proyek **Deteksi Warna** ini.
+
+---
+
+## 🙏 Ucapan Terima Kasih Khusus
+
+- **Dosen Pembimbing**  
+  Untuk bimbingan, masukan, dan motivasinya dalam menyelesaikan proyek ini.
+
+- **Seluruh Anggota Tim**  
+  Atas kerja sama, ide-ide kreatif, dan kontribusi teknis yang luar biasa.
+
+- **Komunitas Open Source**  
+  Untuk berbagai tools, library, dan inspirasi yang telah membantu mempercepat pengembangan.
+
+## 📚 Resource & Tools yang Digunakan
+- [OpenCV](https://opencv.org/) - Untuk pemrosesan gambar.
+- [Python](https://www.python.org/) - Bahasa pemrograman utama.
+- [GitHub](https://github.com/) - Platform kolaborasi dan version control.
+- [VS Code](https://code.visualstudio.com/) - Text editor untuk pengembangan.
+
+---
+
+## 🌟 Inspirasi
+Proyek ini terinspirasi dari berbagai sumber terbuka dan komunitas yang mendukung perkembangan teknologi citra digital.
+
+# Support - DetecTone
+
+Terima kasih telah menggunakan proyek **DetecTone**!
+
+Jika Anda memerlukan bantuan, berikut beberapa cara untuk mendapatkan dukungan:
+
+---
+
+## 🔹 Tanya Jawab Umum
+Sebelum menghubungi tim, harap periksa terlebih dahulu:
+- [FAQ.md](./FAQ.md) - Daftar pertanyaan yang sering diajukan.
+
+---
+
+## 🔹 Melaporkan Bug
+Jika Anda menemukan bug atau masalah teknis:
+1. Buka halaman Issues di repository GitHub kami.
+2. Klik tombol **New Issue**.
+3. Pilih template laporan bug.
+4. Isi form dengan informasi lengkap, termasuk:
+   - Langkah-langkah untuk mereproduksi bug.
+   - Screenshot (jika ada).
+   - Log error (jika tersedia).
+
+🔗 **GitHub Issues:** [https://github.com/username/ilkom-23-citra-kelompok-6/issues](https://github.com/username/ilkom-23-citra-kelompok-6/issues)
+
+---
+
+## 🔹 Permintaan Fitur
+Ingin mengusulkan fitur baru?
+- Silakan buat Issue baru dengan label `enhancement`.
+- Jelaskan fitur yang Anda butuhkan dan alasan mengapa itu penting.
+
+---
+
+## 🔹 Kontak Langsung
+Untuk pertanyaan umum yang tidak terkait bug, Anda bisa menghubungi kami lewat email:
+
+## 🔹 Komunitas
+Bergabunglah dalam diskusi bersama pengguna lain:
+- Forum Diskusi (segera hadir)
+- Grup Chat (segera hadir)
+
+---
+
+Kami menghargai kontribusi dan partisipasi Anda untuk membuat proyek **DetecTone** lebih baik!
+
