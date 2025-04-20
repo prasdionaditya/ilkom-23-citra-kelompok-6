@@ -1,4 +1,4 @@
-# Ilkom-23 Citra Kelompok
+# Ilkom-23 Citra Kelompok 6
 
 ## Deskripsi
 Proyek ini adalah aplikasi berbasis web untuk **analisis citra** (image processing), mencakup fungsi seperti deteksi warna, konversi ke grayscale, analisis HSV, dan lainnya.
