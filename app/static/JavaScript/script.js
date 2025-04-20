@@ -28,3 +28,4 @@ function setupImageProcessing() {
     if (!dropArea || !fileInput) return;
 
     let imageData = null;
+    let currentPage = '';
