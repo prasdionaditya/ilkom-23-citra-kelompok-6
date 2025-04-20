@@ -21,15 +21,18 @@ function setupSlider() {
   
   // Fungsi untuk halaman hsv.html, grayscale.html, dan deteksi_warna.html
   function setupImageProcessing() {
+    
+    let currentPage = window.location.pathname.split("/").pop().split(".")[0];
+
     const dropArea          = document.getElementById('drop-area');
-    const fileInput         = document.getElementById('file-input');
     const uploadBtn         = document.getElementById('upload-btn');
+    const fileInput         = document.getElementById('file-input');
     const previewImage      = document.getElementById('preview-image');
     const resultImage       = document.getElementById('result-image');
     const processBtn        = document.getElementById('process-btn');
     const saveBtn           = document.getElementById('save-btn');
-    const resultContainer = document.getElementById('result-container');
-        const applyHsvBtn       = document.getElementById('apply-hsv');
+    const resultContainer   = document.getElementById('result-container');
+    const applyHsvBtn       = document.getElementById('apply-hsv');
     const hueSlider         = document.getElementById('hueSlider');
     const saturationSlider  = document.getElementById('saturationSlider');
     const valueSlider       = document.getElementById('valueSlider');
@@ -124,7 +127,8 @@ function setupSlider() {
           });
           
           const result = await response.json();
-          
+          console.log('Response result:', result);
+
           if (currentPage === 'deteksi_warna') {
             // Handle color detection results
             displayDominantColors(result.dominant_colors);
@@ -146,6 +150,14 @@ function setupSlider() {
       });
     }
     
+    document.addEventListener('DOMContentLoaded', function() {
+        setupImageProcessing();
+    });
+
+    document.getElementById('uploadBtn').addEventListener('click', function () {
+        document.getElementById('uploadBtn').click();
+    });
+
     // Display dominant colors
     function displayDominantColors(colors) {
       if (!resultContainer) return;
@@ -169,10 +181,9 @@ function setupSlider() {
       }
       
       // Check if there are any colors detected
-      if (colors.length === 0) {
+      if (!colors || !Array.isArray(colors) || colors.length === 0) {
         const noColors = document.createElement('div');
         noColors.textContent = 'Tidak ada warna dominan yang terdeteksi';
-        noColors.style.color = '#333';
         resultContainer.appendChild(noColors);
         return;
       }
@@ -244,10 +255,4 @@ function setupSlider() {
         }
       });
     }
-  }
-  
-  // Initialize appropriate functions based on page content
-  document.addEventListener('DOMContentLoaded', function() {
-    setupSlider();
-    setupImageProcessing();
-  });
+}
