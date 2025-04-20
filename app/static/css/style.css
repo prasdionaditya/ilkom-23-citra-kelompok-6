@@ -5,14 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #fffffffa;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 
   /* Background image penuh */
 .backgroundindex {
