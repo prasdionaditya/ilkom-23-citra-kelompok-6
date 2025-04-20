@@ -5,10 +5,11 @@
     <title>Detectone - Deteksi Warna Dominan</title>
     <link rel="icon" href="static/foto/logo.png" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Add html2canvas for saving results -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="background"></div>
-
     <header>
         <div class="logo">
             <a href="{{ url_for('index') }}">
@@ -24,14 +25,13 @@
 
     <main>
         <h1>Deteksi Warna Dominan</h1>
-        <p>Deteksi warna dominan yang praktis dan efisien dari DetecTone. Cukup unggah gambar, lalu sistem akan secara otomatis menganalisis dan menampilkan warna utama yang paling dominan. Prosesnya sangat cepat, akurat, dan mendukung berbagai kebutuhan desain serta analisis warna. Identifikasi warna utama dalam hitungan detik dengan teknologi canggih dari DetecTone.
-        </p>
+        <p>Deteksi warna dominan yang praktis dan efisien dari DetecTone. Cukup unggah gambar, lalu sistem akan secara otomatis menganalisis dan menampilkan warna utama yang paling dominan. Prosesnya sangat cepat, akurat, dan mendukung berbagai kebutuhan desain serta analisis warna. Identifikasi warna utama dalam hitungan detik dengan teknologi canggih dari DetecTone.</p>
 
         <section>
             <div class="tool-container">
                 <h3>Input Gambar</h3>
                 <div id="drop-area">
-                    <p>atau letakkan gambar di sini</p>
+                    <p>Seret gambar ke sini atau klik untuk unggah</p>
                     <img id="preview-image">
                 </div>
                 <button id="upload-btn" class="upload-btn">Unggah Gambar</button>
@@ -48,14 +48,14 @@
 
         <div class="button-container">
             <button id="process-btn" class="process-btn">Deteksi Warna</button>
-            <button id="save-btn" class="save-btn">Simpan Gambar</button>
+            <button id="save-btn" class="save-btn">Simpan Hasil</button>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 DetecTone. Hak Cipta Dilindungi.</p>
     </footer>
-    
+
     <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
 </body>
 </html>
