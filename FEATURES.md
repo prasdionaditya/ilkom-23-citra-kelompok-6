@@ -11,6 +11,9 @@ Berikut ini adalah fitur-fitur yang tersedia dalam proyek deteksi warna:
 - 🎨 **Konversi Nilai Warna Grayscale ke RGB**
   - Grayscale ke RGB
 
+ - 🎨 **Konversi Warna Gambar ke HSV**
+  -  Gambar ke HSV
+ 
 - 📄 **Export Data**
   - Menyimpan hasil deteksi warna ke dalam file `.csv`.
 
