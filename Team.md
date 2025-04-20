@@ -5,7 +5,7 @@ Dokumen ini berisi daftar anggota tim dan peran mereka dalam proyek ini.
 ## 👥 Daftar Anggota Tim
 
 ### **Manajemen & Koordinasi**
-- **[F1G123023] MUHAMMAD AKSAL PRASDIONADITYA** - Project Manager
+- **[F1G123023] MUHAMMAD AKSAL PRASDION ADITYA** - Project Manager
 
 ### **Tim Desain (UI/UX)**
 - **[F1G123033] PUTRI ADELIA** - UI/UX Designer
