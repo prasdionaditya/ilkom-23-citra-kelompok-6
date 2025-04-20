@@ -7,5 +7,5 @@
 - Mulai pengkodean frontend.
 - Membangun struktur backend.
 
-## Fase 3: Presentasi (14 April 2025)
+## Fase 3: Presentasi (21 April 2025)
 - Melakukan presentasi
