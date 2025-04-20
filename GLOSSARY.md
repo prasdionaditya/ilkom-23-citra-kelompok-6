@@ -74,13 +74,13 @@ Proses penerapan operasi matematika pada gambar untuk memperbaiki atau memodifik
 ### 16. Piksel
 Elemen terkecil dalam sebuah gambar digital yang mewakili nilai warna atau intensitas cahaya.
 
-### 18. Color Space
+### 17. Color Space
 Sistem koordinat yang digunakan untuk mewakili warna dalam berbagai model warna, seperti RGB, HSV, CMYK, dll.
 
-### 19. **Noise**
+### 18. **Noise
 Gangguan atau ketidakteraturan dalam citra yang biasanya disebabkan oleh kesalahan dalam proses pengambilan gambar atau pengolahan citra.
 
-### 20. **Kecerahan (Brightness)**
+### 19. **Kecerahan (Brightness)*
 Ukuran seberapa terang atau gelap gambar secara keseluruhan. Dalam model HSV, ini diwakili oleh parameter **Value**.
 
 ### 21. **Redundansi Warna**
