@@ -83,7 +83,7 @@ Gangguan atau ketidakteraturan dalam citra yang biasanya disebabkan oleh kesalah
 ### 19. Kecerahan (Brightness)
 Ukuran seberapa terang atau gelap gambar secara keseluruhan. Dalam model HSV, ini diwakili oleh parameter **Value**.
 
-### 21. **Redundansi Warna**
+### 21. Redundansi Warna
 Ketika dua atau lebih warna yang sangat mirip atau serupa mendominasi dalam gambar, sehingga sulit membedakan satu sama lain dalam analisis.
 
 ### 22. **Color Mapping**
