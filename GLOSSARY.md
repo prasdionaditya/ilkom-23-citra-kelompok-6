@@ -68,7 +68,7 @@ Gambar yang disimpan dalam format digital, terdiri dari piksel-piksel yang mewak
 ### 14. Segmentasi Citra
 Proses membagi gambar menjadi beberapa bagian atau segmen berdasarkan karakteristik tertentu, seperti warna atau tekstur, untuk memudahkan analisis lebih lanjut.
 
-### 15. **Filter
+### 15. Filter
 Proses penerapan operasi matematika pada gambar untuk memperbaiki atau memodifikasi karakteristik gambar, seperti mengurangi noise atau menonjolkan fitur tertentu.
 
 ### 17. **Piksel**
