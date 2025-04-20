@@ -75,44 +75,38 @@ header nav button:hover {
   /* Split image */
 .split-image-container {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+}
+
+.split-image-container .img {
+    width: 550px;
+    height: auto;
 }
 
 .split-image {
     width: 100%;
-    height: 500px;
-    object-fit: contain;
+    height: 750px;
     position: relative;
-    max-width: 500px;
     overflow: hidden;
     border-radius: 10px;
+    
 }
 
 .img-wrapper {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
     overflow: hidden;
+
 }
 
 .img-before-wrapper {
     width: 50%;
-    z-index: 2;
 }
 
 .slider-handle {
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 5px;
+    width: 1px;
     height: 100%;
     background-color: #f5f4f4e8;
-    z-index: 3;
-    cursor: ew-resize;
 }
 
 .label-before,
@@ -243,14 +237,12 @@ main section h3 {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.915);
-    background-image: linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9),
-        linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     border: 2px solid #71797E;
     border-radius: 10px;
     padding: 20px;
-    height: 250px;
+    height: 300px;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -265,8 +257,6 @@ main section h3 {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.9);
-    background-image: linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9),
-        linear-gradient(45deg, #d9d9d9 25%, transparent 25%, transparent 75%, #d9d9d9 75%, #d9d9d9);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     border: 2px solid #71797E;
