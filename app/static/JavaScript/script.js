@@ -34,4 +34,5 @@ function setupImageProcessing() {
     if (window.location.pathname.includes('hsv')) {
         currentPage = 'hsv';
     } else if (window.location.pathname.includes('grayscale')) { 
-    
+        currentPage = 'grayscale';
+    }
