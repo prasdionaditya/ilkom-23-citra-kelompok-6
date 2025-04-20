@@ -24,4 +24,7 @@ function setupImageProcessing() {
     const resultImage = document.getElementById('result-image');
     const processBtn = document.getElementById('process-btn');
     const saveBtn = document.getElementById('save-btn');
+
     if (!dropArea || !fileInput) return;
+
+    let imageData = null;
