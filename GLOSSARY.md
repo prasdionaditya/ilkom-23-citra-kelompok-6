@@ -39,6 +39,28 @@ Proses pengiriman aplikasi dari lingkungan pengembangan ke produksi sehingga bis
 ### 11. Python 
 Python adalah bahasa pemrograman tingkat tinggi yang dinamis dan terstruktur yang sangat populer di berbagai bidang, seperti pengembangan web, analisis data, kecerdasan buatan (AI), pembelajaran mesin (machine learning), dan banyak lagi.
 
+### 12. HSV
+HSV (Hue, Saturation, Value) adalah model warna yang sering digunakan dalam pengolahan citra dan grafik komputer. Model ini menggambarkan warna berdasarkan tiga parameter utama:
+
+Hue (H):
+
+Merupakan warna dasar atau jenis warna, yang diukur dalam derajat dari 0 hingga 360.
+
+0° adalah merah, 120° adalah hijau, 240° adalah biru, dan 360° kembali ke merah.
+
+Hue memberikan identitas utama warna, misalnya apakah itu merah, biru, kuning, dll.
+
+Saturation (S):
+
+Mengukur seberapa "murni" warna tersebut. Saturasi berkisar dari 0 hingga 100%.
+
+Saturasi 0% berarti warna tersebut akan menjadi abu-abu (tidak ada warna asli), sedangkan 100% menunjukkan warna yang paling murni (penuh warna).
+
+Value (V):
+
+Mengukur seberapa terang atau gelap warna tersebut, dengan rentang 0 hingga 100%.
+
+Value 0% berarti warna tersebut sepenuhnya gelap (hitam), dan value 100% berarti warna tersebut sepenuhnya terang. 
 ---
 
 
