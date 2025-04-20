@@ -29,3 +29,5 @@ function setupImageProcessing() {
 
     let imageData = null;
     let currentPage = '';
+
+    // Determine current page
