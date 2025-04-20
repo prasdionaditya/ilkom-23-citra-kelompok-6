@@ -92,10 +92,10 @@ Proses pemetaan warna tertentu pada piksel-piksel dalam gambar untuk tujuan visu
 ### 23. Image Thresholding
 Metode untuk memisahkan objek dari latar belakang dalam gambar berdasarkan nilai piksel yang ditentukan oleh threshold.
 
-### 24. **Color Calibration**
+### 24. Color Calibration
 Proses penyesuaian warna pada citra digital agar sesuai dengan representasi warna yang sebenarnya, dengan mengoreksi pengaruh perangkat seperti kamera atau monitor.
 
-### 25. **Saturation Adjustment**
+### 25. Saturation Adjustment
 Proses mengubah seberapa kuat atau pudar warna dalam gambar, sering digunakan dalam pengeditan gambar dan analisis warna.
 
 ### 26. Binarisasi
