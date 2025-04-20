@@ -89,7 +89,7 @@ Ketika dua atau lebih warna yang sangat mirip atau serupa mendominasi dalam gamb
 ### 22. Color Mapping
 Proses pemetaan warna tertentu pada piksel-piksel dalam gambar untuk tujuan visualisasi atau pemrosesan lebih lanjut.
 
-### 23. **Image Thresholding**
+### 23. Image Thresholding
 Metode untuk memisahkan objek dari latar belakang dalam gambar berdasarkan nilai piksel yang ditentukan oleh threshold.
 
 ### 24. **Color Calibration**
