@@ -10,3 +10,4 @@ function setupSlider() {
         const rect = container.getBoundingClientRect();
         let offset = e.clientX - rect.left;
         let percent = offset / container.offsetWidth * 100;
+        beforeWrapper.style.width = percent + "%";
