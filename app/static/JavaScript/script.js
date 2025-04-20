@@ -17,3 +17,4 @@ function setupSlider() {
 
 // Fungsi untuk halaman hsv.html dan grayscale.html
 function setupImageProcessing() {
+    const dropArea = document.getElementById('drop-area');
