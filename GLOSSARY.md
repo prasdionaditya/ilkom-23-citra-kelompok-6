@@ -80,7 +80,7 @@ Sistem koordinat yang digunakan untuk mewakili warna dalam berbagai model warna,
 ### 18. Noise
 Gangguan atau ketidakteraturan dalam citra yang biasanya disebabkan oleh kesalahan dalam proses pengambilan gambar atau pengolahan citra.
 
-### 19. **Kecerahan (Brightness)*
+### 19. Kecerahan (Brightness)
 Ukuran seberapa terang atau gelap gambar secara keseluruhan. Dalam model HSV, ini diwakili oleh parameter **Value**.
 
 ### 21. **Redundansi Warna**
