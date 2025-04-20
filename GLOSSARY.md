@@ -86,7 +86,7 @@ Ukuran seberapa terang atau gelap gambar secara keseluruhan. Dalam model HSV, in
 ### 21. Redundansi Warna
 Ketika dua atau lebih warna yang sangat mirip atau serupa mendominasi dalam gambar, sehingga sulit membedakan satu sama lain dalam analisis.
 
-### 22. **Color Mapping**
+### 22. Color Mapping
 Proses pemetaan warna tertentu pada piksel-piksel dalam gambar untuk tujuan visualisasi atau pemrosesan lebih lanjut.
 
 ### 23. **Image Thresholding**
@@ -98,7 +98,7 @@ Proses penyesuaian warna pada citra digital agar sesuai dengan representasi warn
 ### 25. **Saturation Adjustment**
 Proses mengubah seberapa kuat atau pudar warna dalam gambar, sering digunakan dalam pengeditan gambar dan analisis warna.
 
-### 26. **Binarisasi**
+### 26. Binarisasi
 Proses mengonversi gambar menjadi dua warna (hitam dan putih) berdasarkan nilai intensitas atau threshold, digunakan dalam banyak aplikasi pengolahan citra, seperti deteksi objek.
 
 ---
