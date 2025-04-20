@@ -111,4 +111,27 @@ Meskipun aplikasi dapat mendeteksi warna dari gambar dengan ukuran besar, kami s
 ## 5. Bagaimana cara berkontribusi pada proyek ini?
 Kami menyambut baik kontribusi dari kamu! Untuk informasi lebih lanjut tentang cara berkontribusi, silakan baca panduan kontribusi di [CONTRIBUTING.md](CONTRIBUTING.md).
 
+# FEATURES
+
+# Fitur-Fitur - Proyek Deteksi Warna
+
+Berikut ini adalah fitur-fitur yang tersedia dalam proyek deteksi warna:
+
+## Fitur Utama
+
+- 📷 **Deteksi Warna Dominan dari Gambar**
+  - Upload gambar dari komputer.
+  - Klik pada gambar untuk mendeteksi warna.
+
+- 🎨 **Konversi Nilai Warna Grayscale ke RGB**
+  - Grayscale ke RGB
+
+ - 🎨 **Konversi Warna Gambar ke HSV**
+  -  Gambar ke HSV
+ 
+  - 🎨 **Deteksi Warna Dominan**
+  - Deteksi Warna Dominan
+ 
+- 📄 **Export Data**
+  - Menyimpan hasil deteksi warna ke dalam file `.csv`.
 
