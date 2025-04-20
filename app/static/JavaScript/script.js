@@ -36,3 +36,10 @@ function setupImageProcessing() {
     } else if (window.location.pathname.includes('grayscale')) { 
         currentPage = 'grayscale';
     }
+
+    // Handle click on upload button
+    if (uploadBtn) {
+        uploadBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+    }
