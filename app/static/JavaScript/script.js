@@ -43,3 +43,8 @@ function setupImageProcessing() {
             fileInput.click();
         });
     }
+
+    // Handle file selection
+    if (fileInput) {
+        fileInput.addEventListener('change', handleFile);
+    }
