@@ -5,3 +5,5 @@ function setupSlider() {
     const container = document.querySelector(".split-image");
 
     if (!container) return;
+
+    container.addEventListener("mousemove", (e) => {
