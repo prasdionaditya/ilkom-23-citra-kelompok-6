@@ -20,3 +20,4 @@ function setupImageProcessing() {
     const dropArea = document.getElementById('drop-area');
     const fileInput = document.getElementById('file-input');
     const uploadBtn = document.getElementById('upload-btn');
+    const previewImage = document.getElementById('preview-image');
