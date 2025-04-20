@@ -7,3 +7,4 @@ function setupSlider() {
     if (!container) return;
 
     container.addEventListener("mousemove", (e) => {
+        const rect = container.getBoundingClientRect();
