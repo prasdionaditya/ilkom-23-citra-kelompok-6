@@ -12,3 +12,5 @@ function setupSlider() {
         let percent = offset / container.offsetWidth * 100;
         beforeWrapper.style.width = percent + "%";
         sliderHandle.style.left = percent + "%";
+    });
+}
