@@ -77,7 +77,7 @@ Elemen terkecil dalam sebuah gambar digital yang mewakili nilai warna atau inten
 ### 17. Color Space
 Sistem koordinat yang digunakan untuk mewakili warna dalam berbagai model warna, seperti RGB, HSV, CMYK, dll.
 
-### 18. **Noise
+### 18. Noise
 Gangguan atau ketidakteraturan dalam citra yang biasanya disebabkan oleh kesalahan dalam proses pengambilan gambar atau pengolahan citra.
 
 ### 19. **Kecerahan (Brightness)*
