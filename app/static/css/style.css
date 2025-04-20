@@ -19,12 +19,12 @@
     .background {
         position: fixed;
         top: 0;
-        width: 50%;
+        width: 20%;
         height: 100%;
         background: url('../foto/background.jpg') no-repeat center center/cover;
         z-index: -1;
         filter: brightness(0.4);
-        filter: blur(8px);
+        filter: blur(4px);
         transform: scale(10);
     }
 
@@ -79,7 +79,7 @@
         height: auto;
     }
 
-    .split-image-container .img {
+    .split-image-container img {
         width: 550px;
         height: auto;
     }
@@ -291,6 +291,8 @@ main section h3 {
 }
 
 .upload-btn:hover {
+    display: inline-block;
+    cursor: pointer;
     background-color: #0c7bd6;
 }
 
@@ -358,4 +360,48 @@ main section h3 {
     .save-btn {
         width: 100%;
     }
+}
+
+/*HSV SLIDER*/
+.hsv-sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.hsv-sliders label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.hsv-sliders span {
+    min-width: 30px;
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
