@@ -8,7 +8,6 @@ Berikut ini adalah fitur-fitur yang tersedia dalam proyek deteksi warna:
   - Upload gambar dari komputer.
   - Klik pada gambar untuk mendeteksi warna.
 
-
 - 🎨 **Konversi Nilai Warna Grayscale ke RGB**
   - Grayscale ke RGB
 

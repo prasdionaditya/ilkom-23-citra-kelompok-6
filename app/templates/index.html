@@ -23,10 +23,10 @@
         <div class="split-image-container">
             <div class="split-image">
                 <div class="img-wrapper">
-                    <img src="{{ url_for('static', filename='foto/hitam.jpg') }}" class="img img-after">
+                    <img src="{{ url_for('static', filename='foto/berwarna.jpg') }}" class="img img-after">
                 </div>
                 <div class="img-wrapper img-before-wrapper">
-                    <img src="{{ url_for('static', filename='foto/hitam.jpg') }}" class="img img-before" style="filter: grayscale(100%);">
+                    <img src="{{ url_for('static', filename='foto/berwarna.jpg') }}" class="img img-before" style="filter: grayscale(100%);">
                 </div>
                 <div class="slider-handle" id="sliderHandle"></div>
                 <div class="label-before">sebelum</div>
@@ -53,6 +53,7 @@
                     </a>
                 </div>
                 <div class="tool-item">
+                    <a href="{{ url_for('deteksi_warna_page') }}">
                     <img src="{{ url_for('static', filename='foto/tool3.jpg') }}" alt="Analisis Warna Dominan">
                     <div>ANALISIS WARNA DOMINAN</div>
                 </div>
