@@ -36,6 +36,9 @@ Sekumpulan definisi dan protokol yang memungkinkan dua aplikasi berkomunikasi sa
 ### 10. Deployment
 Proses pengiriman aplikasi dari lingkungan pengembangan ke produksi sehingga bisa diakses oleh pengguna.
 
+### 11. Python 
+Python adalah bahasa pemrograman tingkat tinggi yang dinamis dan terstruktur yang sangat populer di berbagai bidang, seperti pengembangan web, analisis data, kecerdasan buatan (AI), pembelajaran mesin (machine learning), dan banyak lagi.
+
 ---
 
 
