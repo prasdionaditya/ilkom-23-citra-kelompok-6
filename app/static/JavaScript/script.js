@@ -113,3 +113,17 @@ function setupImageProcessing() {
             }
         });
     }
+
+    // Save the processed image
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            if (resultImage.src) {
+                const link = document.createElement('a');
+                link.download = currentPage === 'hsv' ? 'hsv-image.png' : 'grayscale-image.png';
+                link.href = resultImage.src;
+                link.click();
+            } else {
+                alert('Belum ada gambar yang diproses');
+            }
+        });
+    }
