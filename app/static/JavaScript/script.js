@@ -83,3 +83,33 @@ function setupImageProcessing() {
             reader.readAsDataURL(file);
         }
     }
+
+    // Process image
+    if (processBtn) {
+        processBtn.addEventListener('click', async () => {
+            if (!imageData) return;
+            
+            try {
+                const operation = currentPage === 'hsv' ? 'rgb_to_hsv' : 'rgb_to_grayscale';
+                
+                const response = await fetch('/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        image: imageData,
+                        operation: operation
+                    }),
+                });
+                
+                const result = await response.json();
+                resultImage.src = result.processed_image;
+                resultImage.style.display = 'block';
+                saveBtn.style.display = 'block';
+            } catch (error) {
+                console.error('Error processing image:', error);
+                alert('Terjadi kesalahan saat memproses gambar');
+            }
+        });
+    }
