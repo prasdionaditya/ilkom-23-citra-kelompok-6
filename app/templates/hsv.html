@@ -2,8 +2,9 @@
 <html lang="id">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static/foto/logo.png" type="image/png">
     <meta charset="UTF-8">
-    <title>Konversi Warna ke HSV - DetecTone</title>
+    <title>Detectone - HSV</title>
 </head>
 <body>
     <div class="background"></div>
@@ -27,10 +28,12 @@
         <section>
             <div class="tool-container">
                 <h3>Input Gambar</h3>
+
                 <div id="drop-area">
                     <p>atau letakkan gambar di sini</p>
                     <img id="preview-image">
                 </div>
+
                 <button id="upload-btn" class="upload-btn">Unggah Gambar</button>
                 <input type="file" id="file-input" accept="image/*" style="display: none;">
             </div>

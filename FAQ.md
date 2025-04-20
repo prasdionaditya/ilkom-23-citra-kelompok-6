@@ -12,7 +12,7 @@ Saat ini, aplikasi ini mendukung format gambar berikut:
 - PNG
 - BMP
 
-## 3. Bagaimana cara menggunakan aplikasi ini?
+## 3. Bagaimana cara menggunakan website deteksi warna ini?
 Setelah aplikasi berjalan di localhost, ikuti langkah-langkah berikut:
 1. **Unggah Gambar**: Pilih gambar yang ingin kamu deteksi warnanya.
 2. **Deteksi Warna**: Aplikasi akan memproses gambar dan menampilkan warna dominan dalam format RGB, HEX, dan HSV.
