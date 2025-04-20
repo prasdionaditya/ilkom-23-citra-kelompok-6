@@ -68,3 +68,18 @@ function setupImageProcessing() {
             }
         });
     }
+
+    // Process file
+    function handleFile() {
+        const file = fileInput.files[0];
+        if (file && file.type.match('image.*')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imageData = e.target.result;
+                previewImage.src = imageData;
+                previewImage.style.display = 'block';
+                processBtn.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    }
