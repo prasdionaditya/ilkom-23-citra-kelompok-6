@@ -7,10 +7,15 @@ import base64
 import io
 from sklearn.cluster import KMeans
 from collections import Counter
+import logging
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+logging.basicConfig(level=logging.INFO)
+
+logging.basicConfig(level=logging.INFO)
 
 def rgb_to_hsv(img):
     hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
@@ -197,8 +202,8 @@ def process_image(image_data, operation):
         dominant_colors = detect_dominant_colors(img_array)
         return img_array, image, dominant_colors
     else:
-        result_img = image
-    
+        result_img = image  # fallback ke original image
+
     return img_array, result_img
 
 def image_to_base64(image):
@@ -226,32 +231,25 @@ def deteksi_warna():
 
 @app.route('/process', methods=['POST'])
 def process():
-    image_data = request.json['image']
-    operation = request.json['operation']
-    
-    original, processed = process_image(image_data, operation)
-    processed_base64 = image_to_base64(processed)
-    
-    response = {
-        'processed_image': processed_base64,
-    }
-    
-    return jsonify(response)
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'No JSON data received'}), 400
 
-@app.route('/detect_colors', methods=['POST'])
-def detect_colors():
-    image_data = request.json['image']
-    num_colors = request.json.get('num_colors', 5)  # Default 5 warna
-    
-    _, original_img, dominant_colors = process_image(image_data, 'detect_colors')
-    processed_base64 = image_to_base64(original_img)
-    
-    response = {
-        'processed_image': processed_base64,
-        'dominant_colors': dominant_colors
-    }
-    
-    return jsonify(response)
+    image_data = data.get('image')
+    if not image_data:
+        return jsonify({'error': 'No image data provided'}), 400
+
+    operation = data.get('operation')
+    color_name = data.get('color_name')
+    hsv_values = data.get('hsv_values')
+
+    try:
+        original, processed = process_image(image_data, operation, hsv_values, color_name)
+        processed_base64 = image_to_base64(processed)
+        return jsonify({'processed_image': processed_base64})
+    except Exception as e:
+        logging.exception("Error while processing image:")
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)  # Ubah ke False saat produksi

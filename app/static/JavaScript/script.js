@@ -1,4 +1,8 @@
-// Fungsi untuk halaman index.html - Slider gambar
+document.addEventListener('DOMContentLoaded', () => {
+    setupSlider();
+    setupImageProcessing();
+});
+
 function setupSlider() {
     const sliderHandle = document.getElementById("sliderHandle");
     const beforeWrapper = document.querySelector(".img-before-wrapper");
@@ -17,80 +21,76 @@ function setupSlider() {
   
   // Fungsi untuk halaman hsv.html, grayscale.html, dan deteksi_warna.html
   function setupImageProcessing() {
-    const dropArea = document.getElementById('drop-area');
-    const fileInput = document.getElementById('file-input');
-    const uploadBtn = document.getElementById('upload-btn');
-    const previewImage = document.getElementById('preview-image');
-    const resultImage = document.getElementById('result-image');
-    const processBtn = document.getElementById('process-btn');
-    const saveBtn = document.getElementById('save-btn');
-    const resultContainer = document.getElementById('result-container');
     
-    if (!dropArea || !fileInput) return;
+    let currentPage = window.location.pathname.split("/").pop().split(".")[0];
+
+    const dropArea          = document.getElementById('drop-area');
+    const uploadBtn         = document.getElementById('upload-btn');
+    const fileInput         = document.getElementById('file-input');
+    const previewImage      = document.getElementById('preview-image');
+    const resultImage       = document.getElementById('result-image');
+    const processBtn        = document.getElementById('process-btn');
+    const saveBtn           = document.getElementById('save-btn');
+    const resultContainer   = document.getElementById('result-container');
+    const applyHsvBtn       = document.getElementById('apply-hsv');
+    const hueSlider         = document.getElementById('hueSlider');
+    const saturationSlider  = document.getElementById('saturationSlider');
+    const valueSlider       = document.getElementById('valueSlider');
+    const hueValue          = document.getElementById('hueValue');
+    const saturationValue   = document.getElementById('saturationValue');
+    const valueValue        = document.getElementById('valueValue');
+
+    hueSlider.addEventListener('input', () => {
+        hueValue.textContent = hueSlider.value;
+    });
+
+    saturationSlider.addEventListener('input', () => {
+        saturationValue.textContent = saturationSlider.value;
+    });
+
+    valueSlider.addEventListener('input', () => {
+        valueValue.textContent = valueSlider.value;
+    });
     
     let imageData = null;
-    let currentPage = '';
-    
-    // Determine current page
-    if (window.location.pathname.includes('hsv')) {
-      currentPage = 'hsv';
-    } else if (window.location.pathname.includes('grayscale')) {
-      currentPage = 'grayscale';
-    } else if (window.location.pathname.includes('deteksi_warna')) {
-      currentPage = 'deteksi_warna';
-    }
-    
-    // Handle click on upload button
-    if (uploadBtn) {
-      uploadBtn.addEventListener('click', () => {
-        fileInput.click();
-      });
-    }
-    
-    // Handle file selection
-    if (fileInput) {
-      fileInput.addEventListener('change', handleFile);
-    }
-    
-    if (dropArea) {
-      dropArea.addEventListener('dragover', (e) => {
+
+    // === Upload File ===
+    uploadBtn.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', () => {
+        handleFile(fileInput.files[0]);
+    });
+
+    // === Drag & Drop ===
+    dropArea.addEventListener('dragover', (e) => {
         e.preventDefault();
         dropArea.style.borderColor = '#ff9800';
-      });
-      
-      dropArea.addEventListener('dragleave', () => {
+    });
+
+    dropArea.addEventListener('dragleave', () => {
         dropArea.style.borderColor = '#aaa';
-      });
-      
-      dropArea.addEventListener('drop', (e) => {
+    });
+
+    dropArea.addEventListener('drop', (e) => {
         e.preventDefault();
         dropArea.style.borderColor = '#aaa';
         if (e.dataTransfer.files.length) {
-          fileInput.files = e.dataTransfer.files;
-          handleFile();
+            handleFile(e.dataTransfer.files[0]);
         }
-      });
-    }
-    
-    // Process file
-    function handleFile() {
-      const file = fileInput.files[0];
-      if (file && file.type.match('image.*')) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          imageData = e.target.result;
-          previewImage.src = imageData;
-          previewImage.style.display = 'block';
-          processBtn.style.display = 'block';
-          
-          // Update drop area message
-          const dropAreaText = dropArea.querySelector('p');
-          if (dropAreaText) {
-            dropAreaText.style.display = 'none';
-          }
+    });
+
+    // === File Preview Handler ===
+    function handleFile(file) {
+        if (file && file.type.match('image.*')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imageData = e.target.result;
+                previewImage.src = imageData;
+                previewImage.style.display = 'block';
+                saveBtn.style.display = 'inline-block';
+            };
+            reader.readAsDataURL(file);
         }
-        reader.readAsDataURL(file);
-      }
     }
     
     // Process image
@@ -127,7 +127,8 @@ function setupSlider() {
           });
           
           const result = await response.json();
-          
+          console.log('Response result:', result);
+
           if (currentPage === 'deteksi_warna') {
             // Handle color detection results
             displayDominantColors(result.dominant_colors);
@@ -149,6 +150,14 @@ function setupSlider() {
       });
     }
     
+    document.addEventListener('DOMContentLoaded', function() {
+        setupImageProcessing();
+    });
+
+    document.getElementById('uploadBtn').addEventListener('click', function () {
+        document.getElementById('uploadBtn').click();
+    });
+
     // Display dominant colors
     function displayDominantColors(colors) {
       if (!resultContainer) return;
@@ -172,10 +181,9 @@ function setupSlider() {
       }
       
       // Check if there are any colors detected
-      if (colors.length === 0) {
+      if (!colors || !Array.isArray(colors) || colors.length === 0) {
         const noColors = document.createElement('div');
         noColors.textContent = 'Tidak ada warna dominan yang terdeteksi';
-        noColors.style.color = '#333';
         resultContainer.appendChild(noColors);
         return;
       }
@@ -247,10 +255,4 @@ function setupSlider() {
         }
       });
     }
-  }
-  
-  // Initialize appropriate functions based on page content
-  document.addEventListener('DOMContentLoaded', function() {
-    setupSlider();
-    setupImageProcessing();
-  });
+}
