@@ -8,3 +8,4 @@ function setupSlider() {
 
     container.addEventListener("mousemove", (e) => {
         const rect = container.getBoundingClientRect();
+        let offset = e.clientX - rect.left;
