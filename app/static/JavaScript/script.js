@@ -127,3 +127,10 @@ function setupImageProcessing() {
             }
         });
     }
+}
+
+// Initialize appropriate functions based on page content
+document.addEventListener('DOMContentLoaded', function() {
+    setupSlider();
+    setupImageProcessing();
+});
