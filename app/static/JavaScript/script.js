@@ -22,3 +22,4 @@ function setupImageProcessing() {
     const uploadBtn = document.getElementById('upload-btn');
     const previewImage = document.getElementById('preview-image');
     const resultImage = document.getElementById('result-image');
+    const processBtn = document.getElementById('process-btn');
